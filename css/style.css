@@ -1,0 +1,1029 @@
+@font-face{
+    src: url(fonts/Geometria.ttf);
+    font-family: geom;
+}
+@font-face{
+    src: url(fonts/Geometria-Heavy.ttf);
+    font-family: geomH;
+}
+body{
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 50vh;
+    color: white;
+    font-family: geomH;
+    background-color: #151515;
+    justify-items: center;
+}
+main{
+    display: flex;
+    align-items: center;
+}
+button,input,select,option{
+    outline: none;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ------------------ HOME ------------------ */
+
+.home{
+    display: grid;
+    grid-template-rows: 100vh auto;
+}
+    .headerHome{
+        background-image: url('../img/the-simpsons-bart-simpson-cartoon-homer-simpson-wallpaper-preview.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+        .degradadoMain{
+            width: 100%;
+            height: 100%;
+            opacity: 90%;
+            display: grid;
+            grid-template-rows: 5fr 1.5fr 1fr;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                'primertitulo'
+                'primersinopsis'
+                'verprincipal'
+            ;
+            justify-items: center;
+            background: linear-gradient(black,#002055,#0061B0,#002055,#0061B0,black);
+        }
+            .primerTitulo{
+                width: 85%;
+                padding-top: 100px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                grid-area: primertitulo;
+            }   
+                .primerTitulo h2{
+                    font-size: 2em;
+                }
+                .primerInfo{
+                    display: flex;
+                    align-items: center;
+                    font-family: geom;
+                    font-size: 1em;
+                }
+                    .rating,.calidad{
+                        color: #ffcd00;
+                    }
+                    .duracion{
+                        opacity: 70%;
+                    }
+            .primerSinopsis{
+                width: 85%;
+                grid-area: primersinopsis;
+                display: flex;
+            }
+                .primerSinopsis p{        
+                    opacity: 70%;
+                    font-family: geom;
+                    font-size: 0.8em;
+                }
+            .verPrincipal{
+                width: 85%;
+                grid-area: verprincipal;
+                display: flex;
+                align-items: center;
+            }
+                #verPrincipal{
+                    font-size: 1em;
+                    padding-left: 10%;
+                    padding-right: 10%;
+                    border-radius: 50px;
+                    height: 3em;
+                    border: none;
+                    background-color: #ffcd00;
+                    color: #151515;
+                    font-family: geomH;
+                    outline: none;
+                }
+                
+.mainHome{
+    padding-bottom: 30px;
+    height: auto;
+    flex-direction: column;
+    background: linear-gradient(transparent,#002055);
+}
+    .tiendaP{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(black,transparent);
+    }
+        .cajaTiendaP{
+            width: 85%;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+        }
+            .tiendaPP{
+                width: 85%;
+            }
+            #entrarTienda{
+                font-size: 1em;
+                color: #ffcd00;
+                cursor: pointer;
+            }
+.posters{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    .tempsTitle{
+        width: 100%;
+        font-size: 2em;
+    }
+    .postersCaja{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "t1 t2"
+            "t3 t4"
+            "t5 t6"
+            "t7 t8";
+            justify-items: center;
+    }
+        .temp1{
+            grid-area: t1;
+        }
+        .temp2{
+            grid-area: t2;
+        }
+        .temp3{
+            grid-area: t3;
+        }
+        .temp4{
+            grid-area: t4;
+        }
+        .temp5{
+            grid-area: t5;
+        }
+        .temp6{
+            grid-area: t6;
+        }
+        .temp7{
+            grid-area: t7;
+        }
+        .temp8{
+            grid-area: t8;
+        }
+        .postersCaja article{
+            width: 100%;
+            height: auto;
+            flex-grow: 1fr;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+            .postersCaja article button{
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background: none;
+                border: none;
+                outline: none;
+            }
+            .postersCaja article img{
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+            }
+            .postersCaja article button p{
+                color: white;
+                font-family: geom;
+            }
+            .anioCaja{
+                position: absolute;
+                width: 6em;
+                height: 10em;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+            }
+                .anio{
+                    background-color: #0061B0;
+                    padding: 0 .5em;
+                    border-radius: 1em;
+                    color: white;
+                    font-family: geomH;
+                }
+
+/* ------------------ MIRAR ------------------ */
+
+.mainMirar{
+    margin-top: 50px;
+    grid-area: mainMirar;
+    height: auto;
+    flex-direction: column;
+    background: linear-gradient(transparent,#002055);
+}
+.cajaVideo{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    .cajaVideo h1{
+        font-family: geomH;
+    }
+    .verVideo{
+        width: 100%;
+        height: 80%;
+        background-color: white;
+    }
+.cajaSinopsis{
+    width: 85%;
+    display: flex;
+}
+    .sinopsis{
+        margin-top: 20px;
+        font-family: geom;
+        font-size: small;
+    }
+.sTablaMirar{
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+    .tablaMirar{
+        width: 85%;
+        font-family: geom;
+        font-size: 0.8em;
+        border-collapse: collapse;
+    }
+        .tablaMirar td{
+            border-bottom: solid 1px #ffcd00;
+            height: 40px;
+        }
+        .sinopCapi{
+            width: 70px;
+        }
+.pressPlaylist{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: pressPlaylist;
+    padding-bottom: 30px;
+}
+    .creaTuPlay{
+        width: 85%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+        .creaTuPlay input{
+            width: 100%;
+            height: 40px;
+            border-radius: 50px;
+            margin-bottom: 5px;
+            border: none;
+            text-align: center;
+            font-family: geom;
+            margin-bottom: 10px;
+            outline: none;
+        }
+        #crearPlay{
+            background-color: #ffcd00;
+            font-family: geomH  ;
+            color: #151515;
+        }
+    .formPlay{
+        width: 85%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+        .formPlayTop,.formPlayBottom{
+            display: flex;
+            justify-content: space-between;
+            font-family: geom;
+            font-size: 0.8em;
+            align-items: center;
+        }
+            #elNombrePlay{
+                color: #ffcd00;
+                font-family: geomH;
+                font-size: 1.5em;
+            }
+            #promCalif{
+                color: #ffcd00;
+            }
+        .elejirTempsCaja{
+            font-family: geom;
+            display: flex;
+            justify-content: center;
+        }
+        .select-caps{
+            display: flex;
+        }
+            .botonera-playlist{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            #js-cantiCap, #js-califCap, #js-btn-agregarCap{
+                border: none;
+                border-radius: 3em;
+                height: 2em;
+                text-align: center;
+                margin-top: 1em;
+            }
+                #js-btn-agregarCap, #js-cantiCap{
+                    width: 3em;
+                    height: 3em;
+                    background-color: #ffcd00;
+                    color: #151515;
+                }
+                #js-cantiCap{
+                    background-color: #0061B0;
+                    color: white;
+                }
+                #js-califCap{
+                    background: none;
+                    color: #ffcd00;
+                }
+                #js-selecTemp,#js-selectEpi1,#js-selectEpi2,#js-selectEpi3,#js-selectEpi4,#js-selectEpi5,#js-selectEpi6,#js-selectEpi7,#js-selectEpi8{
+                    border: none;
+                    height: 2em;
+                    text-align: center;
+                    margin-top: 1em;
+                    padding-left: 1em;
+                    color: #0061B0;
+                    font-family: geomH;
+                }
+                #js-selecTemp{
+                    width: 20%;
+                    border-top-left-radius: 3em;
+                    border-bottom-left-radius: 3em;
+                }
+                #js-selectEpi1,#js-selectEpi2,#js-selectEpi3,#js-selectEpi4,#js-selectEpi5,#js-selectEpi6,#js-selectEpi7,#js-selectEpi8{
+                    width: 80%;
+                    border-top-right-radius: 3em;
+                    border-bottom-right-radius: 3em;
+                }
+    .cajaPlay{
+        width: 85%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+        .playlist{
+            width: 100%;
+            font-family: geom;
+            font-size: 0.8em;
+            border-collapse: collapse;
+        }
+            th{
+                font-size: smaller;
+                border-bottom: 1px solid white;
+            }
+            .playlist td{
+                border-bottom: solid 1px #ffcd00;
+                height: 50px;
+            }
+            .playlist a{
+                text-decoration: none;
+                color: white;
+            }
+            
+            #tablaBody button{
+                background: none;
+                color: white;
+                border: none;
+            }
+
+        
+        .borrarPlay{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .borrarPlay button{
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 50px;
+            border: none;
+            font-family: geomH;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            background-color: #676767;
+            color: #151515;
+            outline: none;
+        }
+
+/* ------------------ TIENDA ------------------ */
+
+.tienda{
+    display: flex;
+    flex-direction: column;
+}
+    .headerTienda{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #0061B0;
+        grid-area: headerTienda;
+        font-size: 1.5em;
+        font-style: italic;
+    }
+        .prodCaja{
+            width: 85%;
+            height: 80%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+                'p1'
+                'p2'
+                'p3'
+                'p4'
+                'p5'
+                'p6'
+            ;
+        }
+            .prodCaja article{
+                width: 100%;
+                margin-top: 15px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                background-color: white;
+                border-radius: 5%;
+            }
+                .prod1{
+                    grid-area: p1;
+                }.prod2{
+                    grid-area: p2;
+                }.prod3{
+                    grid-area: p3;
+                }.prod4{
+                    grid-area: p4;
+                }.prod5{
+                    grid-area: p5;
+                }.prod6{
+                    grid-area: p6;
+                }
+            .imagenProducto img{
+                width: 100%;
+                border-radius: 5%;
+            }
+            .detalles{
+                display: flex;
+                justify-content: start;
+                background-color: white;
+                border-radius: 5%;
+            }
+                .detalles ul{
+                    width: 100%;
+                    color: #676767;
+                    font-size: 0.8em;
+                    font-family: geom;
+                    list-style-type: none;
+                }
+                    .detalles ul a{
+                        text-decoration: none;
+                        color: #0061B0;
+                        font-family: geomH;
+                    }
+                    .precio{
+                        font-family: geomH;
+                    }
+                    .gratis{
+                        color: green;
+                    }
+    .mainTienda{
+        grid-area: mainTienda;
+        justify-content: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .atencion{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffcd00;
+        color: #151515;
+        grid-area: atencion;
+        text-align: center;
+    }
+    #suscribir{
+        width: 100%;
+        grid-area: suscribir;
+        display: flex;
+        justify-content: center;
+    }
+        .contSuscribir{
+            width: 85%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+            .contSuscribir input{
+                width: 85%;
+                height: 40px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                border-radius: 50px;
+                text-align: center;
+                border: none;
+                font-family: geom;
+            }
+                #enviar{
+                    background-color: #0061B0;
+                    color: white;
+                }
+        .captcha{
+            width: 100vw;
+            height: 100vh;
+            background: rgba(14, 14, 14, 0.9);
+            position: absolute;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: geom;
+        }
+            #introducir,#verificar{
+                width: 85%;
+                height: 40px;
+                text-align: center;
+                border-radius: 50px;
+                border: none;
+                font-family: geom;
+                margin-top: 20px;
+                outline: none;
+            }
+            #verificar{
+                background-color: #0061B0;
+                color: white;
+            }
+                #aleatorio{
+                    width: 40px;
+                    height: 40px;
+                    font-size: 2em;
+                    background: none;
+                    border: none;
+                    color: #ffcd00;
+                    outline: none;
+                }
+                .gracias{
+                    width: 100%;
+                    height: 100%;
+                    flex-direction: column;
+                    align-items: center;
+                    position: absolute;
+                    background: rgba(14, 14, 14, 0.9);
+                }
+                    .gracias img{
+                        width: 100%;
+                    }
+                    .gracias p,.error p{
+                        color: #ffcd00;
+                        font-family: geomH;
+                        font-size: 2em;
+                    }
+                .error{
+                    width: 100%;
+                    flex-direction: column;
+                    align-items: center;
+                    position: absolute;
+                    text-align: center;
+                    background: rgba(14, 14, 14, 0.9);
+                }
+                    .error img{
+                        width: 100%;
+                    }
+
+/* ------------------ QUIENES SOMOS ------------------ */
+
+.mainSobre{
+    flex-direction: column;
+    grid-area: mainSobre;
+}
+    .cajaSobre{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+        .quienesSomos{
+            width: 85%;
+            margin-top: 20%;
+            margin-bottom: 15%;
+            text-align: center;
+        }
+            .quienesSomos h1{
+                font-size: 1.3em;
+            }
+            .quienesSomos p{
+                font-size: 0.8em;
+                font-family: geom;
+            }
+
+/* ------------------ FOOTER ------------------ */
+
+footer{
+    width: 100%;
+    background-color: #ffcd00;
+    color: #002055;
+    display: flex;
+    justify-content: center;
+}
+footer h1{
+    font-size: 1.3em;
+}
+.footerMirar{
+    grid-area: footerMirar;
+}
+.footerTienda{
+    grid-area: footerTienda;
+}
+.footerSobre{
+    grid-area: footerSobre;
+}
+
+/* ------------------ FLOTANTES ------------------ */
+
+.show{
+    transform: translateX(-20px);
+}
+
+/* ------------------ ROSQUITA ------------------ */
+
+.botonDona{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 15%;
+    position: fixed;
+    z-index: 1;
+}
+    #menu{
+        width: 65px;
+        height: 65px;
+        margin-right: 5%;
+        background: none;
+        border: none;
+        outline: none;
+    }
+        .dona{
+            animation: 5s rotatedona linear infinite;
+            width: inherit;
+            height: inherit;
+        }
+        @keyframes rotatedona{
+            from{
+                transform: rotate(0deg);
+            }to{
+                transform: rotate(360deg);
+            }
+        }
+
+/* ------------------ NAV ------------------ */
+
+#navInv{
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+}
+.accesosFlotantes{
+    position: fixed;
+}
+    .menuOculto{
+        position: absolute;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+        #navegador{
+            width: 80%;
+            height: 100%;
+            background: rgba(14, 14, 14, 0.9);
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            position: fixed;
+        }
+            .tituloNav{
+                height: 17%;
+                font-family: geomH;
+                color: #ffcd00;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .suscribir{
+                width: 100%;
+                height: 40%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+                #buscarTuCapi{
+                    width: 77%;
+                    height: 40px;
+                    background: none;
+                    border: solid 1.5px #0061B0;
+                    border-radius: 50px;
+                    margin-top: 50px;
+                    padding-left: 20px;
+                    outline: none;
+                    color: #ffcd00;
+                    font-family: geom;
+                }
+            .cajaBtnNav{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 40px;
+            }
+                .cajaBtnNav input{
+                    width: 85%;
+                    height: 40px;
+                    background: none;
+                    color: white;
+                    margin-bottom: 20px;
+                    border: solid 1px;
+                    border-color: #ffcd00;
+                    border-radius: 50px;
+                    font-family: geomH;
+                    font-size: 1em;
+                    outline: none;
+                }
+                #btnContacto,#btnContacto2{
+                    border-color: #0061B0;
+                }
+
+                #tablaBody input{
+                    border-radius: 3em;
+                    background: none;
+                    border: solid 1px #ffcd00;
+                    color: white;
+                    text-align: center;
+                }
+
+.navPC{
+    width: 100%;
+    height: 10%;
+    background: rgba(14, 14, 14, 0.9);
+    position: absolute;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+    .navPC input{
+        width: 100%;
+        color: #ffcd00;
+        border: none;
+        background: none;
+        font-size: 1.3em;
+        outline: none;
+        font-family: geomH;
+    }
+
+/* ------------------ INTERIOR NAV ------------------ */
+
+.botonesIngresarU{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+#entrar,#registro{
+    width: 47%;
+    height: 40px;
+    border: none;
+    color: white;
+    border-radius: 50px;
+    outline: none;
+    font-family: geom;
+}
+#entrar{
+    background-color: #0061B0;
+}
+#registro{
+    background-color: #ffcd00;
+    color: #151515;
+}
+
+/*--------------- UMBRAL RESPONSIVE ---------------*/
+     
+@media only screen and (max-width:600px){
+    .navPC{
+        display: none;
+    }
+}   
+@media only screen and (min-width:600px){
+    .botonDona{
+        display: none;
+    }
+    .accesosFlotantes{
+        display: none;
+    }
+    .primerTitulo h2{
+        font-size: 3em;
+    }
+    .primerInfo{
+        font-size: 1.5em;
+    }
+    .primerSinopsis p{      
+        font-size: 1em;
+    }
+    #verPrincipal{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .cajaTiendaP{
+        flex-direction: row;
+    }
+    .tiendaPP{
+        width: 45%;
+    }
+    #entrarTienda{
+        margin-left: 30px;
+        font-size: 2em;
+    }
+    .postersCaja{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "t1 t2 t3 t4"
+            "t5 t6 t7 t8";
+        justify-items: center;
+    }
+    .anioCaja{
+        height: 12em;
+    }
+    .bodyMirar{
+        grid-template-rows: 4% auto auto 10%;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+            'headerMirar headerMirar'
+            'mainMirar pressPlaylist'
+            'footerMirar footerMirar'
+        ;
+    }
+    .cajaVideo{
+        height: 500px;
+    }
+    .tabla1{
+        font-size: 0.8em;
+    }
+    #star-size{
+        font-size: 1em;
+    }
+    .pressPlaylist{
+        background: linear-gradient(#151515,#002055);
+    }
+    .temporadas{
+        height: 1000px;
+    }
+    .prodCaja{
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr .1fr 1fr;
+        grid-template-areas: 
+            'p1 . p2' 
+            'p3 . p4' 
+            'p5 . p6'
+        ;
+    }
+    .headerTienda{
+        margin-top: 60px;
+    }
+    .contSuscribir input{
+        width: 60%;
+    }
+    .quienesSomos{
+        width: 60%;
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+        .quienesSomos h1{
+            font-size: 2em;
+        }
+        .quienesSomos p{
+            font-size: 0.8em;
+            font-family: geom;
+        }
+    footer h1{
+        font-size: 3em;
+    }
+}
+@media only screen and (min-width:1000px){
+    .bodySobre{
+        grid-template-rows: 90vh 30vh;
+    }
+    .primerSinopsis p{      
+        font-size: 1.2em;
+    }
+    #verPrincipal{
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 1.2em;
+    }
+    .postersCaja article button p{
+        font-size: 1.5em;
+    }
+    .anioCaja{
+        font-size: 1.3em;
+        height: 13em;
+    }    
+    .tiendaPP{
+        width: 30%;
+    }
+    .footerHome,.footerMirar{
+        align-items: center;
+    }
+    footer h1{
+        font-size: 4.5em;
+    }
+}
+@media only screen and (min-width:1400px){
+    .bodySobre{
+        grid-template-rows: 90vh 30vh;
+    }
+    .quienesSomos{
+        width: 60%;
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+        .quienesSomos h1{
+            font-size: 3em;
+        }
+        .quienesSomos p{
+            font-size: 1em;
+            font-family: geom;
+        }
+    footer h1{
+        font-size: 6em;
+    }
+}
+
+/*-----------------------JAVASCRIPT-------------------------*/  
+
+.js-pintarCelda{
+    background-color: #ffcd00;
+    color: #151515;
+}
+.negrita{
+    color: #151515;
+}
+#js-star-size{
+    font-size: 0.8em;
+}
+#adverNombre{
+    color: #ffcd00;
+    font-family: geom;
+}
+.js-mostrar-Play{
+    display: none;
+}
+.js-ocultarCaptcha{
+    display: none;
+}
+.mostrarCaptcha{
+    display: flex;
+}
+.js-mostrar{
+    display: flex;
+}
+.js-ocultar{
+    display: none;
+}
+.js-pintarBtn{
+    background-color: white;
+}
